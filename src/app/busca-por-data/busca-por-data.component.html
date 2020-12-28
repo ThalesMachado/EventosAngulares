@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Data de Início
+    <input type="date" formControlName="dataInicio">
+  </label>
+  <button type="submit">Pesquisar</button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Número</th>
+      <th scope="col">Ano</th>
+      <th scope="col">Data Início</th>
+      <th scope="col">Data Fim</th>
+      <th scope="col">Cidade Sede</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let edicao of edicoes">
+      <th scope="row">{{edicao.numero}}</th>
+      <td>{{edicao.ano}}</td>
+      <td>{{edicao.dataInicio}}</td>
+      <td>{{edicao.datafim}}</td>
+      <td>{{edicao.cidadeSede}}</td>
+      <td>{{edicao.estado}}</td>
+    </tr>
+  </tbody>
+</table>

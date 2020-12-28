@@ -1,0 +1,15 @@
+<section>
+  <div class="row">
+    <div *ngFor="let evento of eventos" class="col-sm-6 card-div">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{evento.nome}} ({{evento.sigla}})</h5>
+          <p class="card-text">Área de Concentração: {{evento.areaConcentracao}}</p>
+          <p class="card-text">Instituição: {{evento.instituicaoOrganizadora}}</p>
+          <a routerLink="/buscar-edicoes/{{evento.id}}" routerLinkActive="active" class="btn btn-primary">Visualizar
+            Edições</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
